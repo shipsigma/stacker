@@ -16,21 +16,13 @@ module "stack-outputs" {
 
   name = "cloudformation-stack-name"
   outputs = {
-    myVpcId = { 
-      Value = aws_vpc.main.id
-      Description = "Main AWS VPC"
+    route53ZoneId = {
+      Value       = data.aws_route53_zone.main.id
+      Description = "Main Route53 Zone ID"
       Export = {
-        Name = "vpc:main:id"
-      }
-    }
-    myVpcArn = {
-      Value = aws_vpc.main.arn
-      Description = "Main VPC ARN"
-      Export = {
-        Name = "vpc:main:arn"
+        Name = "route53:main:id"
       }
     }
   }
-
 }
 ```
