@@ -9,7 +9,7 @@ Since Cloudformation does not allow creating a stack without at least a single r
 
 ## Usage
 
-```
+```tf
 module "stack-outputs" {
 
   source = "github.com/shipsigmadev/stacker"
