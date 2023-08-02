@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="stacker.gif" width=350 alt=""><br>
+  <img src="stacker.gif" width=200 alt=""><br>
   stacker<br>
 </h1>
 
