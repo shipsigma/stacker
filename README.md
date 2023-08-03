@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="stacker.gif" width=200 alt=""><br>
+  <img src="https://github.com/shipsigma/stacker/assets/11765848/97d1d1cc-33b4-42d5-a78c-01e067dcc411" width=200 alt=""><br>
   stacker<br>
 </h1>
 
