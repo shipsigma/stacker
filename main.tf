@@ -17,7 +17,8 @@
 
 locals {
 
-  outputs = var.outputs
+  description = var.description
+  outputs     = var.outputs
 
   // yamlencode wraps everything in quotes, which Cloudformation does not like, so we remove the quotes.
   cfn_template = replace(yamlencode({
@@ -30,7 +31,8 @@ locals {
         Condition = "HasNot"
       }
     }
-    Outputs = local.outputs
+    Description = local.description
+    Outputs     = local.outputs
   }), "\"", "")
 }
 
@@ -38,7 +40,6 @@ locals {
  * Create the Cloudformation Stack that will output our values.
  */
 resource "aws_cloudformation_stack" "outputs" {
-  name = var.name
-
+  name          = var.name
   template_body = local.cfn_template
 }
