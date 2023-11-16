@@ -3,9 +3,11 @@ variable "name" {
   type        = string
 }
 
+# default to null so we can use the ternary operator in locals
 variable "description" {
   description = "The description of the Cloudformation Stack to create."
   type        = string
+  default     = ""
 }
 
 variable "outputs" {
